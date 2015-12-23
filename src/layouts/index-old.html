@@ -1,0 +1,44 @@
+{{ partial "default_head.html" . }}
+
+    <p>
+      <img class="left" src="images/zliu_tju.jpg" style="width:25%;"> </img>
+      Zhanliang Liu, Principle Development Engineer<br />
+      <a href="http://haoma.sogou.com">Sogou Haomatong</a> <br />
+      <a href="http://shouji.sogou.com">Sogou Pinyin Input</a> <br />
+      <a href="http://www.sogou.com">Sogou, Inc</a> <br />
+      liuzhanliang [at] sogou-inc.com <br />
+      Sohu.com Internet Plaza, Wudaokou, Beijing 100084
+    </p>
+
+    <p>
+    Zhanliang Liu is a very technical engineering manager who is able to build complex system/products with experience in mature and startup companies, especially for search related area.
+    </p>
+    <p>
+    He is currently a principle engineer, manager of <a href="http://haoma.sogou.com">Sogou haomatong</a> development group. Prior to Sogou, he was a researcher at <a href="http://www.tencent.com/en-us/index.shtml">Tencent</a> working on Web Crawling, Information Integration, Information Retrieval and Data Mining. Before that, he was a research software development engineer in the <a href="http://research.microsoft.com/en-us/groups/wsm/">Web Search and Mining Group</a> at Microsoft Research Asia with research interests on Information Retrieval and Web Search Architecture. He holds six patents for his innovation in his research fields.
+    </p>
+    <p>
+    He also has a close relationship with the academic community. Currently he is the adjunct chief architect at <a href="http://bdai.ruc.edu.cn/">Big Data Analytics &amp; Intelligence Lab</a> of Renmin University of China. <!--, and an adjunct advisor at <a href="http://econ.cufe.edu.cn/sy.htm">School of Economics</a> of Central University of Finance and Economics.-->
+    </p>
+    <p>
+    He was one of the founding team members of <a href="http://www.hitchsters.com/">Hitchsters.com</a>(Was named one of <a href="http://content.time.com/time/specials/2007/article/0,28804,1633488_1633594_1633596,00.html">Time Magazine's 50 Top Websites for 2007</a>. Successfully negotiated an all-cash sale to a competitor in 2010.)
+    </p>
+    <p>
+    He received his bachelor's degree and master's degree in Computer Science from <a href="http://www.tju.edu.cn">Tianjin University</a>, China, in 2005 and 2007, respectively.
+    </p>
+
+
+{{ $pagination := 5 }}
+
+<div class="posts">
+  {{ range first $pagination .Data.Pages }}
+    {{ if eq .Type "post"}}
+      <div class="post">
+        <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <span class="post-date">{{ .Date.Format .Site.Params.DateForm }}</span>
+        {{ .Summary }}
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+{{ partial "default_foot.html" . }}

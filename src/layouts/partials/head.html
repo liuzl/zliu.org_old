@@ -1,0 +1,23 @@
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> -->
+  <title>
+    {{ if eq .Url "/" }}
+      {{ .Site.Params.Title }} &middot; {{ .Site.Params.Tagline }}
+    {{ else }}
+      {{ .Title }} &middot; {{ .Site.Params.Title }}
+    {{ end }}
+  </title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/ruc.ico">
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <link rel="stylesheet" href="/highlightjs/9.0/default.min.css">
+  <script src="/highlightjs/9.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
