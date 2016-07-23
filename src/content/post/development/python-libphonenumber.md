@@ -24,7 +24,7 @@ x = phonenumbers.parse('+8615801290852', None)
 <code class="python" style="font-size:10px;">
 import phonenumbers
 x = phonenumbers.parse('+8615801290852', None)
-cname = phonenumbers.region_code_for_number(num).lower()
+cname = phonenumbers.region_code_for_number(x).lower()
 print cname
 </code>
 <pre>
